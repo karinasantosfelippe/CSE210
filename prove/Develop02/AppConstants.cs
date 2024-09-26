@@ -1,9 +1,7 @@
 namespace Develop02
 {
     public static class AppConstants
-    {
-        public const string JOURNAL_FILE = "myFile.txt";
-        
+    {        
         public static readonly List<string> OPTIONS = [
             "1. Write",
             "2. Display",

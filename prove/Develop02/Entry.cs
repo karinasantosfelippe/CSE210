@@ -2,12 +2,10 @@ namespace Develop02
 {
     public class Entry
     {
-        string _date;
-        string _promptText;
-        string _entryText;
+        public string _date;
+        public string _promptText;
+        public string _entryText;
 
-        public void Display(){
-            
-        }
+        public void Display() => Console.WriteLine($"Date: {_date} - Prompt: {_promptText} \n{_entryText}"); // display the entry for the user
     }
 }
