@@ -1,4 +1,8 @@
-using Develop02;
+/*
+Author: Karina Santos Felippe
+Exceeding requirements: described in the README file > Exceeding Requirements section
+*/
+
 using Develop03;
 
 class Program
