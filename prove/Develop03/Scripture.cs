@@ -30,6 +30,8 @@ public class Scripture
         }
     }
 
+    public void ShowAllScriptureWords() => _words.ForEach(word => word.Show());
+
     public string GetDisplayText()
     {
         string scriptureText = "";

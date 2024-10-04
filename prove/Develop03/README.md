@@ -42,3 +42,4 @@ For this project I added a class with constants to improve the way new scripture
 I have my program working with a library of scriptures rather than a single one. A scripture is randomly chosen and presented to the user.
 The program ask for the user if wants to restart and a new scripture is randomly selected.
 The Reference class has a list of verses and there are two constructors to allow the user add a single verse or a list of verses.
+The Scripture class has a method to show all the words of an scripture to satisfy the random selection in the AppConstants class.

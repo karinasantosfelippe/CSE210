@@ -8,6 +8,7 @@ class Program
         string userInput = "yes";
         while (userInput.ToLower() == "yes")
         {
+            AppConstants.SCRIPTURES.ForEach(scripture => scripture.ShowAllScriptureWords());
             Random random = new();
             int index = random.Next(AppConstants.SCRIPTURES.Count);
             Scripture scripture = AppConstants.SCRIPTURES[index];
