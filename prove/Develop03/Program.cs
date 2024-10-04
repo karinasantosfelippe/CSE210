@@ -1,19 +1,35 @@
-using System;
+using Develop02;
 using Develop03;
 
 class Program
 {
     static void Main(string[] args)
     {
-        Console.Clear();
+        string userInput = "yes";
+        while (userInput.ToLower() == "yes")
+        {
+            Random random = new();
+            int index = random.Next(AppConstants.SCRIPTURES.Count);
+            Scripture scripture = AppConstants.SCRIPTURES[index];
 
-        Reference ref1 = new("Mateus",3,1);
-        Console.WriteLine(ref1.DisplayReference());
+            while (!scripture.IsCompletelyHidden())
+            {
+                Console.Clear();
+                Console.WriteLine(scripture.GetDisplayText());
+                Console.WriteLine("\nPress enter to continue or type 'quit' to finish:");
 
-        Reference ref2 = new("Tiago",1,[5,6,7,8]);
-        Console.WriteLine(ref2.DisplayReference());
-        
-        Reference ref3 = new("Lucas",10,[7,9]);
-        Console.WriteLine(ref3.DisplayReference());
+                userInput = Console.ReadLine();
+                if (userInput.ToLower() == "quit")
+                    break;
+
+                scripture.HideRandomWords(3);
+
+            }
+
+            Console.Clear();
+            Console.WriteLine(scripture.GetDisplayText());
+            Console.WriteLine("\nDo you want to restart? (yes/no)");
+            userInput = Console.ReadLine();
+        }
     }
 }
