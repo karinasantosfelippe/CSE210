@@ -1,0 +1,44 @@
+Order
+* _customer : Customer
+* _products : List<Product>
+
+- Order(Customer customer)
+// should just initialize the list
+- Order(Customer customer, Product product)
+// should initialize the list and add the product
+- Order(Customer customer, List<Product> products)
+- AddProduct(Product product): void
+- CalculateTotalCost() : double
+// the sum of the total cost of each product plus a one-time shipping cost
+// If the customer lives in the USA: shipping cost is $5. If the customer does not live in the USA: shipping cost is $35.
+- PackingLabel() : string
+// list the name and product id of each product in the order
+- ShippingLabel() : string
+// list the name and address of the customer
+
+Product
+* _name : string
+* _productId : string
+* _price : double
+* _quantity : int
+
+- Product(string name, string productId, double price, int quantity)
+- Product(string name, string productId, double price)
+// quantity should be 1
+- GetTotalCost() : double
+// computed by multiplying the price per unit and the quantity
+
+Customer
+* _name: string
+* _address : Address
+
+- LiveInUSA() : bool
+
+Address
+* _street
+* _city
+* _stateOrProvince
+* _country
+
+- IsUSAAddress() : bool
+- GetFullAddress() : string

@@ -1,5 +1,5 @@
 /*
-Author: Kairna Santos Felippe
+Author: Karina Santos Felippe
 */
 namespace Foundation1;
 class Program
