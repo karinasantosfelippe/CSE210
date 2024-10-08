@@ -1,0 +1,11 @@
+Video
+* _title : string
+* _author : string
+* _length : int // in seconds
+* _comments : List<Comment>
+
+- NumberOfComments() : int
+
+Comment
+* _commentAuthor: string
+* _text : string
