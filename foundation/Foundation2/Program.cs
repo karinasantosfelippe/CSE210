@@ -1,5 +1,7 @@
+/*
+Author: Karina Santos Felippe
+*/
 namespace Foundation2;
-
 class Program
 {
     static void Main(string[] args)
@@ -35,6 +37,8 @@ class Program
             Console.WriteLine("\nOrder:");
             Console.WriteLine(order.PackingLabel());
             Console.WriteLine($"Total: $ {order.CalculateTotalCost().ToString("F")}.\n");
+            Console.WriteLine("--------------------");
         }
+        Console.ReadLine();
     }
 }
