@@ -46,23 +46,55 @@ Your program must do the following:
 5. It should continue until it has reached the number of seconds the user specified for the duration.
 6. The activity should conclude with the standard finishing message for all activities.
 
+#### Reflection Activity
+1. The activity should begin with the standard starting message and prompt for the duration that is used by all activities.
+2. The description of this activity should be something like: "This activity will help you reflect on times in your life when you have shown strength and resilience. This will help you recognize the power you have and how you can use it in other aspects of your life."
+3. After the starting message, select a random prompt to show the user such as:
+    - _Think of a time when you stood up for someone else._
+    - _Think of a time when you did something really difficult._
+    - _Think of a time when you helped someone in need._
+    - _Think of a time when you did something truly selfless._
+4. After displaying the prompt, the program should ask the to reflect on questions that relate to this experience. These questions should be pulled from a list such as the following:
+    - _Why was this experience meaningful to you?_
+    - _Have you ever done anything like this before?_
+    - _How did you get started?_
+    - _How did you feel when it was complete?_
+    - _What made this time different than other times when you were not as successful?_
+    - _What is your favorite thing about this experience?_
+    - _What could you learn from this experience that applies to other situations?_
+    - _What did you learn about yourself through this experience?_
+    - _How can you keep this experience in mind in the future?_
+5. After each question the program should pause for several seconds before continuing to the next one. While the program is paused it should display a kind of spinner.
+6. It should continue showing random questions until it has reached the number of seconds the user specified for the duration.
+7. The activity should conclude with the standard finishing message for all activities.
+
+#### Listing Activity
+1. The activity should begin with the standard starting message and prompt for the duration that is used by all activities.
+2. The description of this activity should be something like: "This activity will help you reflect on the good things in your life by having you list as many things as you can in a certain area."
+3. After the starting message, select a random prompt to show the user such as:
+    - _Who are people that you appreciate?_
+    - _What are personal strengths of yours?_
+    - _Who are people that you have helped this week?_
+    - _When have you felt the Holy Ghost this month?_
+    - _Who are some of your personal heroes?_
+4. After displaying the prompt, the program should give them a countdown of several seconds to begin thinking about the prompt. Then, it should prompt them to keep listing items.
+5. The user lists as many items as they can until they they reach the duration specified by the user at the beginning.
+6. The activity them displays back the number of items that were entered.
+7. The activity should conclude with the standard finishing message for all activities.
 
 ### Design Requirements
 In addition your program must:
 
-1. Use the principles of Encapsulation, including proper use of classes, methods, public/private access modifiers, and follow good style throughout.
-2. Contain at least 3 classes in addition to the Program class: one for the scripture itself, one for the reference (for example "John 3:16"), and to represent a word in the scripture.
-3. Provide multiple constructors for the scripture reference to handle the case of a single verse and a verse range ("Proverbs 3:5" or "Proverbs 3:5-6").
+1. Use inheritance by having a separate class for each kind of activity with a base class to contain any shared attributes or behaviors.
+2. Avoid duplicating code in classes where it could instead be placed in a base class.
+3. Follow the principles of encapsulation and abstraction by having private member variables and putting related items in the same class.
 
 ### Simplifications
 For the core requirements you do not need to worry about the following:
 
-1. Saving your file as a .csv file requires you to handle commas and quotes in the content appropriately. At this point, you can ignore that and just choose a symbol for a separator that you think is unlikely to show up in the content (such as | or ~ or ~|~).
-2. You do not need to store the date as an actual C# DateTime object in your class or in the file. You can simply store it as a string.
+1. Your program does not need to track any statistics such as how many times or how frequently the user has done an activity.
+2. When getting random questions or prompts, you can just choose a random one from the list. You don't have to worry about if it was already chosen this session, or worry about running out of prompts.
 
 ### Exceeding Requirements
-For this project I added a class with constants to improve the way new scriptures can be added.
-I have my program working with a library of scriptures rather than a single one. A scripture is randomly chosen and presented to the user.
-The program ask for the user if wants to restart and a new scripture is randomly selected.
-The Reference class has a list of verses and there are two constructors to allow the user add a single verse or a list of verses.
-The Scripture class has a method to show all the words of an scripture to satisfy the random selection in the AppConstants class.
+For this project I added a enum for the menu options, so it is easier to add a new activity to the program.
+The program will prevent the user to write a option different from the menu choices by ignoring the answer and showing the menu again.
