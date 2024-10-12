@@ -1,7 +1,9 @@
 namespace Develop05;
-public class Activity(string _name, string _description)
+public class Activity
 {
-    private int _duration = 0;
+    protected string _name;
+    protected string _description;
+    protected int _duration = 0;
 
     public void SetDuration(int duration) => _duration = duration;
     public void DisplayStartingMessage()
@@ -40,7 +42,7 @@ public class Activity(string _name, string _description)
         for (int i = seconds; i > 0; i--)
         {
             Console.Write(i);
-            Thread.Sleep(500);
+            Thread.Sleep(1000);
             Console.Write("\b \b");
         }
     }

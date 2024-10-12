@@ -15,19 +15,23 @@ class Program
             try
             {
                 userInput = int.Parse(Console.ReadLine());
-                if (userInput == (int)MenuOptions.breathing)
+                if (userInput == (int)MenuOptions.Breathing)
                 {
-                    Console.Clear();
-                    Console.WriteLine("Breath!");
-                    Console.ReadLine();
+                    BreathingActivity activity = new();
+                    activity.DisplayStartingMessage();
+                    int duration = int.Parse(Console.ReadLine());
+                    activity.SetDuration(duration);
+                    activity.Run();
+                    activity.DisplayEndingMessage();
+                    activity.ShowSpinner(10);
                 }
-                else if (userInput == (int)MenuOptions.reflecting)
+                else if (userInput == (int)MenuOptions.Reflecting)
                 {
                     Console.Clear();
                     Console.WriteLine("Reflect!");
                     Console.ReadLine();
                 }
-                else if (userInput == (int)MenuOptions.listing)
+                else if (userInput == (int)MenuOptions.Listing)
                 {
                     Console.Clear();
                     Console.WriteLine("Listen!");

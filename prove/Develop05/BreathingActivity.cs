@@ -10,6 +10,9 @@ public class BreathingActivity : Activity
 
     public void Run()
     {
+        Console.Clear();
+        Console.Write("Get ready... ");
+        ShowCountDown(5);
         DateTime startTime = DateTime.Now;
         DateTime endTime = startTime.AddSeconds(_duration);
         while (DateTime.Now < endTime)
