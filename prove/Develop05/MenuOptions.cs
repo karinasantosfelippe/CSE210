@@ -2,9 +2,9 @@ namespace Develop05
 {
     public enum MenuOptions
     {
-        breathing = 1,
-        reflecting = 2,
-        listing = 3,
+        Breathing = 1,
+        Reflecting = 2,
+        Listing = 3,
         Quit = 4
     }
 }
