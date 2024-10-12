@@ -12,38 +12,42 @@ class Program
         do
         {
             menu.DisplayMenuSystem();
+            // prevent user to enter an invalid option
             try
             {
                 userInput = int.Parse(Console.ReadLine());
-                if (userInput == (int)MenuOptions.Breathing)
-                {
-                    BreathingActivity activity = new();
-                    activity.DisplayStartingMessage();
-                    int duration = int.Parse(Console.ReadLine());
-                    activity.SetDuration(duration);
-                    activity.Run();
-                    activity.DisplayEndingMessage();
-                    activity.ShowSpinner(10);
-                }
-                else if (userInput == (int)MenuOptions.Reflecting)
-                {
-                    Console.Clear();
-                    Console.WriteLine("Reflect!");
-                    Console.ReadLine();
-                }
-                else if (userInput == (int)MenuOptions.Listing)
-                {
-                    Console.Clear();
-                    Console.WriteLine("Listen!");
-                    Console.ReadLine();
-                }
-                else if (userInput == (int)MenuOptions.Quit)
-                    break;
             }
             catch (System.Exception)
             {
                 continue;
             }
+
+            // breathing activity
+            if (userInput == (int)MenuOptions.Breathing)
+            {
+                BreathingActivity activity = new();
+                activity.DisplayStartingMessage();
+                activity.Run();
+                activity.DisplayEndingMessage();
+                activity.ShowSpinner(8);
+            }
+            else if (userInput == (int)MenuOptions.Reflecting)
+            {
+                Console.Clear();
+                Console.WriteLine("Reflect!");
+                Console.ReadLine();
+            }
+            else if (userInput == (int)MenuOptions.Listing)
+            {
+                Console.Clear();
+                ListingActivity activity = new();
+                activity.DisplayStartingMessage();
+                activity.Run();
+                activity.DisplayEndingMessage();
+                activity.ShowSpinner(8);
+            }
+            else if (userInput == (int)MenuOptions.Quit)
+                break;
         } while (true);
     }
 }

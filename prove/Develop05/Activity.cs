@@ -3,15 +3,15 @@ public class Activity
 {
     protected string _name;
     protected string _description;
-    protected int _duration = 0;
+    protected int _duration = 1;
 
-    public void SetDuration(int duration) => _duration = duration;
     public void DisplayStartingMessage()
     {
         Console.Clear();
-        Console.WriteLine($"Welcome to the {_name} Activity.");
+        Console.WriteLine($"Welcome to the {_name} Activity.\n");
         Console.WriteLine(_description);
-        Console.Write("How long, in seconds, would you like for your session? ");
+        Console.Write("\nHow long, in seconds, would you like for your session? ");
+        _duration = int.Parse(Console.ReadLine());
     }
 
     public void DisplayEndingMessage()
@@ -32,7 +32,7 @@ public class Activity
             Thread.Sleep(500);
             Console.Write("\b \b");
             i++;
-            if(i >= animationStrings.Count)
+            if (i >= animationStrings.Count)
                 i = 0;
         }
     }
