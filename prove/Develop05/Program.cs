@@ -31,21 +31,25 @@ class Program
                 activity.DisplayEndingMessage();
                 activity.ShowSpinner(8);
             }
+            // reflecting activity
             else if (userInput == (int)MenuOptions.Reflecting)
             {
-                Console.Clear();
-                Console.WriteLine("Reflect!");
-                Console.ReadLine();
+                ReflectingActivity activity = new();
+                activity.DisplayStartingMessage();
+                activity.Run();
+                activity.DisplayEndingMessage();
+                activity.ShowSpinner(8);
             }
+            // listing activity
             else if (userInput == (int)MenuOptions.Listing)
             {
-                Console.Clear();
                 ListingActivity activity = new();
                 activity.DisplayStartingMessage();
                 activity.Run();
                 activity.DisplayEndingMessage();
                 activity.ShowSpinner(8);
             }
+            // quir program
             else if (userInput == (int)MenuOptions.Quit)
                 break;
         } while (true);
