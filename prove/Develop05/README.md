@@ -98,3 +98,4 @@ For the core requirements you do not need to worry about the following:
 ### Exceeding Requirements
 For this project I added a enum for the menu options, so it is easier to add a new activity to the program.
 The program will prevent the user to write a option different from the menu choices by ignoring the answer and showing the menu again.
+Each time the user finish the activity, the program will show the menu options but if the user press any diferent choice from the menu the program will ignore and wait for a valid choice.
