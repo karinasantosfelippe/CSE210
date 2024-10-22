@@ -52,4 +52,4 @@ In addition your program must:
 3. Follow the principles of encapsulation and abstraction by having private member variables and putting related items in the same class.
 
 ### Exceeding Requirements
-For this project I ...
+For this project I added a enum file with the menu options. This way, the options can be easily changed and it will not interfere in the program structure. If should be necessary to add or rearange the numbers of the menu options, the program will not be compromized. Furthermore, it is easy to understand what action is being taken in the program, without any comments to help.
