@@ -1,9 +1,5 @@
 # Eternal Quest Program
 
-Author: Karina Santos Felippe
-
----
-
 ## Problem Overview
 Many people set goals for areas they want to improve in their lives. These goals can be very important to help us in our growth, such as highlighted in the Church's Children and Youth program. But despite our best intentions, we often struggle to follow through with these goals.
 

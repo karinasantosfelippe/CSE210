@@ -1,6 +1,7 @@
 /*
-    Author: Karina Felippe
+    Author: Karina Santos Felippe
     Exceeding requirements: the exceeding requirements are described in the README file, section "exceeding requirements".
+    https://github.com/karinasantosfelippe/CSE210/tree/main/prove/Develop06#exceeding-requirements
 */
 
 namespace Develop06;
@@ -9,6 +10,8 @@ class Program
 {
     static void Main(string[] args)
     {
+        GoalManager manager = new();
+
         // default value to intiate the menu
         int selectedMenuOption = -1;
         // looping while the selected options is not quit
@@ -33,10 +36,10 @@ class Program
             switch (selectedMenuOption)
             {
                 case (int)MenuOptions.CreateNewGoal:
-                    Console.WriteLine((int)MenuOptions.CreateNewGoal);
+                    manager.CreateGoal();
                     break;
                 case (int)MenuOptions.ListGoals:
-                    Console.WriteLine((int)MenuOptions.ListGoals);
+                    manager.ListGoalDetails();
                     break;
                 case (int)MenuOptions.SaveGoals:
                     Console.WriteLine((int)MenuOptions.SaveGoals);
