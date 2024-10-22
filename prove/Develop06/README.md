@@ -1,4 +1,4 @@
-# Mindfulness Program
+# Eternal Quest Program
 
 Author: Karina Santos Felippe
 
