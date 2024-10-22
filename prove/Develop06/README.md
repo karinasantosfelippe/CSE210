@@ -53,3 +53,4 @@ In addition your program must:
 
 ### Exceeding Requirements
 For this project I added a enum file with the menu options. This way, the options can be easily changed and it will not interfere in the program structure. If should be necessary to add or rearange the numbers of the menu options, the program will not be compromized. Furthermore, it is easy to understand what action is being taken in the program, without any comments to help.
+Furthermore, I added a warning in the "quit" option to prevent the loss of any unsaved data, and used a try statement to prevent exceptions in the user input for the menu options. If the user input is an invalid option, a warning message will be displayed followed by the menu options.
