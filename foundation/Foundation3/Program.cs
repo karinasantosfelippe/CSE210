@@ -1,7 +1,6 @@
 /*
     Author: Karina Santos Felippe
 */
-
 namespace Foundation3;
 
 class Program
