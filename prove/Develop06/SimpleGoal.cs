@@ -31,5 +31,5 @@ public class SimpleGoal : Goal
         return _points;
     }
 
-    public override string GetStringRepresentation() => $"{_name};{_description};{_points};{_isComplete}";
+    public override string GetStringRepresentation() => $"{GetType().Name};{_name};{_description};{_points};{_isComplete}";
 }

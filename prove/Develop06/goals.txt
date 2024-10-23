@@ -1,4 +1,4 @@
-260
+110
 SimpleGoal;Give a talk;Speak in Sacrament meeting when asked;10;True
-EternalGoal;Study the scriptures;Study for at least 10 min;20
-ChecklistGoal;Attend the Temple;Attend and perform any ordinance;50;100;3;3
+EternalGoal;Study scriptures with my husband;Study at least 5 minutes every day;20
+ChecklistGoal;Attend the Temple;Attend and perform any ordinance;50;1000;12;2

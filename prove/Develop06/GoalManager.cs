@@ -164,7 +164,7 @@ public class GoalManager
         {
             writer.WriteLine(_score);
             foreach (var goal in _goals)
-                writer.WriteLine($"{goal.GetType().Name};{goal.GetStringRepresentation()}");
+                writer.WriteLine(goal.GetStringRepresentation());
         }
         Console.WriteLine("File saved.");
     }
