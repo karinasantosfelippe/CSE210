@@ -44,6 +44,7 @@ public class GoalManager
                     SaveGoals();
                     break;
                 case (int)MenuOptions.LoadGoals:
+                    LoadGoals();
                     break;
                 case (int)MenuOptions.RecordEvent:
                     RecordEvent();
@@ -163,9 +164,9 @@ public class GoalManager
         {
             writer.WriteLine(_score);
             foreach (var goal in _goals)
-                writer.WriteLine($"{goal.GetType()}:{goal.GetStringRepresentation()}");
+                writer.WriteLine($"{goal.GetType().Name};{goal.GetStringRepresentation()}");
         }
-        Console.WriteLine("Progress saved.");
+        Console.WriteLine("File saved.");
     }
 
     private void LoadGoals()
@@ -190,7 +191,8 @@ public class GoalManager
 
                     if (type == nameof(SimpleGoal))
                     {
-                        _goals.Add(new SimpleGoal(name, description, points));
+                        bool isComplete = bool.Parse(parts[4]);
+                        _goals.Add(new SimpleGoal(name, description, points, isComplete));
                     }
                     else if (type == nameof(EternalGoal))
                     {
@@ -206,7 +208,7 @@ public class GoalManager
                     }
                 }
             }
-            Console.WriteLine("Progress loaded.");
+            Console.WriteLine("File loaded.");
         }
         else
         {

@@ -31,7 +31,7 @@ public class ChecklistGoal : Goal
         return _points;
     }
 
-    public override string GetStringRepresentation() => $"{_name};{_description};{_points};{_bonus};{_target};{_amountCompleted};";
+    public override string GetStringRepresentation() => $"{_name};{_description};{_points};{_bonus};{_target};{_amountCompleted}";
 
     public override string GetDetails() => $"{_name} ({_description}) - Current completed: {_amountCompleted}/{_target}";
 }
