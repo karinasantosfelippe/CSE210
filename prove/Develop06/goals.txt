@@ -1,0 +1,3 @@
+0
+SimpleGoal:Give a talk;Speak in sacrament meeting;10;
+EternalGoal:Study the scriptures;Study for at least 10 min;20;
